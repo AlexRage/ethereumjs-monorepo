@@ -22,6 +22,7 @@ export class CasperConsensus implements Consensus {
 
   public async validateDifficulty(header: BlockHeader): Promise<void> {
     if (header.difficulty !== BIGINT_0) {
+      console.log(header.difficulty);
       const msg = 'invalid difficulty.  PoS blocks must have difficulty 0'
       throw new Error(`${msg} ${header.errorStr()}`)
     }
