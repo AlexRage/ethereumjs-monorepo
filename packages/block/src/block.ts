@@ -105,6 +105,7 @@ export class Block {
       } as TxOptions)
       transactions.push(tx)
     }
+    console.log(header);
 
     // parse uncle headers
     const uncleHeaders = []
